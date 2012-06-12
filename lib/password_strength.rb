@@ -1,4 +1,4 @@
-require "active_support"
+require "active_support/all"
 require "password_strength/base"
 require "password_strength/active_record"
 require "password_strength/validators/windows2008"
