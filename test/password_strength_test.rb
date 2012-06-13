@@ -1,4 +1,5 @@
-require "test_helper"
+#!/usr/bin/env ruby -wKU
+require_relative "test_helper"
 
 class TestPasswordStrength < Test::Unit::TestCase
   def setup
@@ -88,12 +89,12 @@ class TestPasswordStrength < Test::Unit::TestCase
 
   def test_penalize_password_with_chars_only
     @strength.password = "abcdef"
-    assert_equal -15, @strength.score_for(:only_chars)
+    assert_equal(-15, @strength.score_for(:only_chars) )
   end
 
   def test_penalize_password_with_numbers_only
     @strength.password = "12345"
-    assert_equal -15, @strength.score_for(:only_numbers)
+    assert_equal(-15, @strength.score_for(:only_numbers) )
   end
 
   def test_penalize_password_equals_to_username
